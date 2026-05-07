@@ -1,0 +1,135 @@
+.simulation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.canvas-wrapper {
+  width: 100%;
+  height: 500px;
+  background-color: #111827; /* dark bg for nice contrast with 3d scene */
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 500;
+  z-index: 10;
+  background-color: rgba(17, 24, 39, 0.8);
+}
+
+.controls-panel {
+  width: 100%;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f3f4f6;
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.primary-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.secondary-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.secondary-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.slider-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.time-slider {
+  flex: 1;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.time-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.time-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.time-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s;
+}
+
+.time-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+.step-label {
+  font-size: 0.875rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #4b5563;
+  min-width: 100px;
+  text-align: right;
+}
